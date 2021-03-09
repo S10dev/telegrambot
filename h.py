@@ -27,7 +27,7 @@ def get_homework_statuses():
 
 
 def send_message(message):
-    chat_id = os.getenv('TELEGRAM_CHAT_ID')
+    chat_id = CHAT_ID
     return telegram.Bot(TELEGRAM_TOKEN).send_message(chat_id = chat_id, text = message)
 
 
