@@ -4,12 +4,11 @@ import telegram
 import time
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 
-PRACTICUM_TOKEN = os.getenv("PRACTICUM_TOKEN")
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+TELEGRAM_TOKEN = 1622442852:AAGd51GD1n2muawUyj-IZCK4um_szxit5hA
+CHAT_ID = 626651183
 
 
 def parse_homework_status(homework):
