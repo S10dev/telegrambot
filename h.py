@@ -25,9 +25,10 @@ def parse_schedule(url):
     day_title = day.find('span', class_='sc-day')
     subjects_time = day.find_all('div', class_='sc-table-col sc-item-time')
     subjects = day.find_all('span', class_='sc-title')
+    types = day.find_all('div', class_='sc-table-col sc-item-type')
     message = f'Добрый вечер!\nПары на {day_title.text}:'
-    for subject, time in zip(subjects, subjects_time):
-        message += '\n\n' + time.text + '\n' + subject.text
+    for subject, time, type_ in zip(subjects, subjects_time, types):
+        message += '\n\n' + time.text + '\n' + type_.text + '\n'+ subject.text
     return (message, day_title.text)
 
 
